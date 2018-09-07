@@ -84,7 +84,7 @@ static NSString * HTMLQuirksModePrefixes[] = {
 
 NS_INLINE BOOL QuirksModePrefixMatch(NSString *publicIdentifier)
 {
-	for (int i = 0; i < sizeof(HTMLQuirksModePrefixes) / sizeof(HTMLQuirksModePrefixes[0]); i++) {
+	for (unsigned long i = 0; i < sizeof(HTMLQuirksModePrefixes) / sizeof(HTMLQuirksModePrefixes[0]); i++) {
 		if ([publicIdentifier hasPrefixIgnoringCase:HTMLQuirksModePrefixes[i]]) {
 			return YES;
 		}
